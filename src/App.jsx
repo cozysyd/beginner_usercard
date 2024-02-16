@@ -1,6 +1,9 @@
 import "./user.css";
-import user from "./user.json";
+import UserCard from "./UserCard";
+import name from "./user.json";
 
-function App() {}
+function App() {
+  return <UserCard name={name} />;
+}
 
 export default App;
