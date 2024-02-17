@@ -1,23 +1,21 @@
 import Proptypes from "prop-types";
-import "./user.json";
+import user from "./user.json";
 
-function UserCard({ children }) {
-  const { name, age, phoneNumber, address } = children;
-
+const UserCard = () => {
   return (
     <div className="card">
-      <h2 className="name">{name}</h2>
+      <h2 className="name">{user.name}</h2>
       <div className="body">
         <div className="label">Age:</div>
-        <div>{age}</div>
+        <div>{user.age}</div>
         <div className="label">Phone Number:</div>
-        <div>{phoneNumber}</div>
+        <div>{user.phoneNumber}</div>
         <div className="label">Address:</div>
-        <div>{address}</div>
+        <div>{user.address}</div>
       </div>
     </div>
   );
-}
+};
 
 UserCard.propTypes = {
   children: Proptypes.node.isRequired,
