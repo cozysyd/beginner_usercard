@@ -1,4 +1,5 @@
 import Proptypes from "prop-types";
+import "./user.json";
 
 export function UserCard({ name, phoneNumber, age, address }) {
   return (
