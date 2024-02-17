@@ -1,7 +1,7 @@
 import Proptypes from "prop-types";
 import "./user.json";
 
-export function UserCard({ name, phoneNumber, age, address }) {
+function UserCard({ name, phoneNumber, age, address }) {
   return (
     <div className="card">
       <h2 className="name">{name}</h2>
@@ -23,3 +23,5 @@ UserCard.propTypes = {
   age: Proptypes.number.isRequired,
   address: Proptypes.string.isRequired,
 };
+
+export default UserCard;
