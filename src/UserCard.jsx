@@ -1,7 +1,9 @@
 import Proptypes from "prop-types";
 import "./user.json";
 
-function UserCard({ name, phoneNumber, age, address }) {
+function UserCard({ children }) {
+  const { name, age, phoneNumber, address } = children;
+
   return (
     <div className="card">
       <h2 className="name">{name}</h2>
@@ -18,6 +20,7 @@ function UserCard({ name, phoneNumber, age, address }) {
 }
 
 UserCard.propTypes = {
+  children: Proptypes.node.isRequired,
   name: Proptypes.string.isRequired,
   phoneNumber: Proptypes.string.isRequired,
   age: Proptypes.number.isRequired,
